@@ -1,0 +1,24 @@
+# Dataset
+dataset/raw/
+dataset/processed/
+data/
+
+# Model checkpoints
+checkpoints/
+*.pth
+*.pt
+*.ckpt
+
+# Experiment outputs
+outputs/
+logs/
+mlruns/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
