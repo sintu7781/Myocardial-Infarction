@@ -1,6 +1,6 @@
 # Dataset
-dataset/raw/
-dataset/processed/
+data/raw/
+data/processed/
 data/
 
 # Model checkpoints
