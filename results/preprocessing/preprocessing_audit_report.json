@@ -1,0 +1,146 @@
+{
+    "example_ecg_id": 1,
+    "signal_shape": [
+        5000,
+        12
+    ],
+    "sampling_rate_hz": 500.0,
+    "duration_seconds": 10.0,
+    "lead_names": [
+        "I",
+        "II",
+        "III",
+        "AVR",
+        "AVL",
+        "AVF",
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6"
+    ],
+    "units": [
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV",
+        "mV"
+    ],
+    "audit_ecg_ids": [
+        15720,
+        2964,
+        18209,
+        1811,
+        15068,
+        18678
+    ],
+    "audit_records": [
+        {
+            "ecg_id": 15720,
+            "mi_label": 1,
+            "fs_hz": 500.0,
+            "samples": 5000,
+            "leads": 12,
+            "duration_s": 10.0,
+            "finite": true,
+            "min_mV": -1.4210000038146973,
+            "max_mV": 1.1089999675750732,
+            "std_mV": 0.1432117372751236
+        },
+        {
+            "ecg_id": 2964,
+            "mi_label": 1,
+            "fs_hz": 500.0,
+            "samples": 5000,
+            "leads": 12,
+            "duration_s": 10.0,
+            "finite": true,
+            "min_mV": -2.132999897003174,
+            "max_mV": 2.941999912261963,
+            "std_mV": 0.3714967966079712
+        },
+        {
+            "ecg_id": 18209,
+            "mi_label": 1,
+            "fs_hz": 500.0,
+            "samples": 5000,
+            "leads": 12,
+            "duration_s": 10.0,
+            "finite": true,
+            "min_mV": -1.3489999771118164,
+            "max_mV": 2.3510000705718994,
+            "std_mV": 0.2138226181268692
+        },
+        {
+            "ecg_id": 1811,
+            "mi_label": 0,
+            "fs_hz": 500.0,
+            "samples": 5000,
+            "leads": 12,
+            "duration_s": 10.0,
+            "finite": true,
+            "min_mV": -1.6510000228881836,
+            "max_mV": 2.4030001163482666,
+            "std_mV": 0.24731111526489258
+        },
+        {
+            "ecg_id": 15068,
+            "mi_label": 0,
+            "fs_hz": 500.0,
+            "samples": 5000,
+            "leads": 12,
+            "duration_s": 10.0,
+            "finite": true,
+            "min_mV": -2.183000087738037,
+            "max_mV": 1.902999997138977,
+            "std_mV": 0.17974615097045898
+        },
+        {
+            "ecg_id": 18678,
+            "mi_label": 0,
+            "fs_hz": 500.0,
+            "samples": 5000,
+            "leads": 12,
+            "duration_s": 10.0,
+            "finite": true,
+            "min_mV": -2.052999973297119,
+            "max_mV": 2.3450000286102295,
+            "std_mV": 0.2527419328689575
+        }
+    ],
+    "preprocessing_config": {
+        "source_sampling_rate_hz": 500.0,
+        "target_sampling_rate_hz": 500.0,
+        "preserve_raw_signal": true,
+        "bandpass": {
+            "enabled": true,
+            "type": "butterworth",
+            "low_hz": 0.5,
+            "high_hz": 40.0,
+            "order": 4,
+            "implementation": "scipy.signal.sosfiltfilt",
+            "zero_phase": true
+        },
+        "notch": {
+            "enabled": false,
+            "frequency_hz": 50.0,
+            "quality_factor": 30.0,
+            "implementation": "scipy.signal.filtfilt",
+            "reason_disabled": "The 40 Hz low-pass already attenuates 50 Hz mains interference; do not apply a redundant 50 Hz notch after this band-pass."
+        },
+        "normalization": {
+            "enabled": false,
+            "method": null,
+            "fit_on_training_data_only": true
+        },
+        "notes": "Provisional configuration. Compare filter settings and inspect morphology before full processing. A 0.5 Hz high-pass can alter ST-segment morphology; include a lower-cutoff sensitivity analysis when evaluating MI-related morphology."
+    }
+}

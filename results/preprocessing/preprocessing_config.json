@@ -1,0 +1,27 @@
+{
+    "source_sampling_rate_hz": 500.0,
+    "target_sampling_rate_hz": 500.0,
+    "preserve_raw_signal": true,
+    "bandpass": {
+        "enabled": true,
+        "type": "butterworth",
+        "low_hz": 0.5,
+        "high_hz": 40.0,
+        "order": 4,
+        "implementation": "scipy.signal.sosfiltfilt",
+        "zero_phase": true
+    },
+    "notch": {
+        "enabled": false,
+        "frequency_hz": 50.0,
+        "quality_factor": 30.0,
+        "implementation": "scipy.signal.filtfilt",
+        "reason_disabled": "The 40 Hz low-pass already attenuates 50 Hz mains interference; do not apply a redundant 50 Hz notch after this band-pass."
+    },
+    "normalization": {
+        "enabled": false,
+        "method": null,
+        "fit_on_training_data_only": true
+    },
+    "notes": "Provisional configuration. Compare filter settings and inspect morphology before full processing. A 0.5 Hz high-pass can alter ST-segment morphology; include a lower-cutoff sensitivity analysis when evaluating MI-related morphology."
+}
