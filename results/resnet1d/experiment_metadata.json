@@ -2,7 +2,7 @@
   "model": "ResNet1D",
   "seed": 42,
   "best_epoch": 14,
-  "best_validation_roc_auc": 0.9420384754856785,
+  "best_validation_roc_auc": 0.9433146014214079,
   "threshold_selection": "maximum validation F1",
   "sampling_rate_hz": 500,
   "signal_shape_channels_first": [
