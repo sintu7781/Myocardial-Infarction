@@ -1,0 +1,16 @@
+{
+  "model": "InceptionTime1D",
+  "seed": 42,
+  "best_epoch": 17,
+  "best_validation_roc_auc": 0.939277193031082,
+  "threshold_selection": "maximum validation F1",
+  "sampling_rate_hz": 500,
+  "input_shape_channels_first": [
+    12,
+    5000
+  ],
+  "train_records": 17418,
+  "validation_records": 2183,
+  "test_records": 2198,
+  "patient_level_split_checks_passed": true
+}
