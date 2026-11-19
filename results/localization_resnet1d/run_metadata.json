@@ -1,0 +1,38 @@
+{
+  "architecture": "compact_resnet1d",
+  "seed": 42,
+  "sampling_rate_hz": 500,
+  "input_shape_per_record": [
+    12,
+    5000
+  ],
+  "target_columns": [
+    "loc_inferior",
+    "loc_anterior",
+    "loc_anteroseptal",
+    "loc_anterolateral",
+    "loc_lateral",
+    "loc_posterior",
+    "loc_inferoposterior"
+  ],
+  "batch_size": 32,
+  "epochs_requested": 25,
+  "best_epoch": 10,
+  "best_validation_loss": 0.41517083457678805,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "train_records": 3969,
+  "validation_records": 484,
+  "test_records": 500,
+  "test_metrics": {
+    "test_loss": 0.4357010943889618,
+    "macro_f1": 0.5130752764326106,
+    "micro_f1": 0.8270571827057183,
+    "macro_precision": 0.5133453912733156,
+    "macro_sensitivity": 0.5756859881979437,
+    "macro_roc_auc": 0.9144145580522188,
+    "macro_pr_auc": 0.6819595220183688,
+    "exact_match_accuracy": 0.622,
+    "hamming_accuracy": 0.9291428571428572
+  }
+}

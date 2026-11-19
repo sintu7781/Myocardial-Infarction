@@ -1,0 +1,8 @@
+territory,validation_selected_threshold
+loc_inferior,0.45
+loc_anterior,0.6
+loc_anteroseptal,0.35
+loc_anterolateral,0.6
+loc_lateral,0.75
+loc_posterior,0.9
+loc_inferoposterior,0.5
